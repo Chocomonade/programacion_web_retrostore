@@ -24,10 +24,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                   <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Inicio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Categorías</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'categorias' %}">Categorías</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'productos' %}">Productos</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Registro</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Perfil</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'perfil' %}">Perfil</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
               </ul>
               <div class="icon-cart ms-3">
@@ -89,7 +89,7 @@
         <div class="img-container">
           <img src="{% static 'assets/imgs/atari.png' %}" class="card-img"/>
           <div class="img-overlay">
-            <div class="img-title"><a href="#">Atari</a></div>
+            <div class="img-title"><a href="{% url 'categoria_atari' %}">Atari</a></div>
             <p class="img-description">Atari, pionero en la industria de los videojuegos, revolucionó el entretenimiento con clásicos como Pong y Asteroids. 🎮</p>
           </div>
         </div>
@@ -100,7 +100,7 @@
         <div class="img-container">
           <img src="{% static 'assets/imgs/nintendo.svg.png' %}" class="card-img"/>
           <div class="img-overlay">
-            <div class="img-title"><a href="#">Nintendo</a></div>
+            <div class="img-title"><a href="{% url 'categoria_nintendo' %}">Nintendo</a></div>
             <p class="img-description">Nintendo, icono de la industria, creó franquicias legendarias como Mario, Zelda y Pokémon. 🎮</p>
           </div>
         </div>
@@ -111,7 +111,7 @@
         <div class="img-container">
           <img src="{% static 'assets/imgs/sega.png' %}" class="card-img"/>
           <div class="img-overlay">
-            <div class="img-title"><a href="#">Sega</a></div>
+            <div class="img-title"><a href="{% url 'categoria_sega' %}">Sega</a></div>
             <p class="img-description">Sega, creadora de Sonic, marcó la historia de los videojuegos con innovaciones en consolas legendarias. 🎮</p>
           </div>
         </div>
@@ -122,7 +122,7 @@
         <div class="img-container">
           <img src="{% static 'assets/imgs/playstation.svg.png' %}" class="card-img"/>
           <div class="img-overlay">
-            <div class="img-title"><a href="#">PlayStation</a></div>
+            <div class="img-title"><a href="{% url 'categoria_playstation' %}">PlayStation</a></div>
             <p class="img-description">PlayStation revolucionó los videojuegos con sagas como Final Fantasy y God of War. 🎮</p>
           </div>
         </div>
@@ -133,7 +133,7 @@
         <div class="img-container">
           <img src="{% static 'assets/imgs/dreamcast.svg.png' %}" class="card-img"/>
           <div class="img-overlay">
-            <div class="img-title"><a href="#">DreamCast</a></div>
+            <div class="img-title"><a href="{% url 'categoria_dreamcast' %}">DreamCast</a></div>
             <p class="img-description">Dreamcast, la última consola de Sega, marcó una era con Shenmue y Sonic Adventure. 🎮</p>
           </div>
         </div>
