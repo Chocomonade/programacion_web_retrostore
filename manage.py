@@ -3,6 +3,8 @@
 import os
 import sys
 
+os.environ['PATH'] = r"C:\oracle\instantclient_23_7" + ";" + os.environ['PATH']
+
 
 def main():
     """Run administrative tasks."""

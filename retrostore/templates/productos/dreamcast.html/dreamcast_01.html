@@ -25,9 +25,20 @@
                 <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'categorias' %}">Categorías</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'productos' %}">Productos</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Registro</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'perfil' %}">Perfil</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                
+                {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'perfil' %}">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'editar_perfil' %}">Editar Perfil</a></li>
+                    <li class="nav-item">
+                        <form method="post" action="{% url 'logout' %}" class="d-inline">
+                            {% csrf_token %}
+                            <button type="submit" class="nav-link border-0 bg-transparent">Cerrar Sesión</button>
+                        </form>
+                    </li>
+                {% else %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Registro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                {% endif %}
               </ul>
               <div class="icon-cart ms-3">
                   <i class="ri-shopping-cart-line"></i>
